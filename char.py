@@ -10,13 +10,13 @@ def char(x):
 def charlisting():
     y = 0
     x = chr(y)
-    while x:
-        try:
+    try:
+        while x:
             x = chr(y)
             print("char {0} = '{1}'".format(y, x))
             y += 1
-        except UnicodeEncodeError:
-            print("not more character")
+    except UnicodeEncodeError:
+        print("not more character")
 
 if __name__ == "__main__":
     charlisting()
